@@ -26,9 +26,9 @@ const connect=async()=>{
             useNewUrlParser:true,              /* prevents the deprecation warning of the 'newstringparser' introduced by mongodb recently, settng this to 'true' takes us to the old stringparser without any issue of deprecation being raised */
             useUnifiedTopology:true        /* this removes the support for several connection options that are no longer relevant, we use the unifiedTopology to use the new unified engine */
         })
-        console.log("MongoDB database connected")
+        // console.log("MongoDB database connected")
     } catch (error) {
-            console.log(error.message);
+            // console.log(error.message);
     }
 }
 
@@ -45,5 +45,5 @@ app.use('/api/v1/booking' ,bookingRoute);     /* all review entering req go here
 
 app.listen(port, ()=>{
     connect();
-    console.log('server is listening on', port);     
+    // console.log('server is listening on', port);     
 });
