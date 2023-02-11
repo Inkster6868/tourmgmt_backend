@@ -33,9 +33,9 @@ const connect=async()=>{
 }
 
 //middleware
+app.use(cookieParser())
 app.use(express.json())
 app.use(cors(corsOptions));
-app.use(cookieParser())
 app.use('/api/v1/auth' ,authRoute);    /* all auth req go here */
 app.use('/api/v1/tours' ,tourRoute);    /* all tours req go here */ 
 app.use('/api/v1/users' ,userRoute);     /* all users req go here */
