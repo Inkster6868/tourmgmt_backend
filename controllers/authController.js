@@ -62,7 +62,8 @@ export const login = async (req, res) => {
             sameSite:'none',
             httpOnly:true,
             expires:token.expiresIn,
-            path:'/'
+            path:'/',
+            secure:true
         }).status(200).json({success:true, token , role, message:"successfully logged in", data:{...rest}})
 
     } catch (error) {
