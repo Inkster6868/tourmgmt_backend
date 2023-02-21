@@ -6,7 +6,13 @@ import jwt from 'jsonwebtoken';
 //user registration
 export const register = async (req, res) => {
     try {
-
+        
+        // if(!email){
+        //     res.status(500).json({
+        //         success: false,
+        //         message: 'Failed to create. Please try again'
+        //     })
+        // }
         //hashing password
         const salt = bcrypt.genSaltSync(10);
         const hash = bcrypt.hashSync(req.body.password, salt)
